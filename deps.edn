@@ -1,0 +1,11 @@
+{:aliases
+ {:test-deps
+  {:extra-deps {rewrite-clj/rewrite-clj {:mvn/version "1.1.46"}
+                io.github.borkdude/deflet {:mvn/version "0.1.0"}}}
+
+ :test ;; added by neil
+ {:extra-paths ["test"]
+  :extra-deps {io.github.cognitect-labs/test-runner
+                {:git/tag "v0.5.0" :git/sha "b3fd0d2"}}
+  :main-opts ["-m" "cognitect.test-runner"]
+  :exec-fn cognitect.test-runner.api/test}}}
